@@ -1,0 +1,24 @@
+package Suma;
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import Suma.OperacionesMatrices;
+public class Main {
+public static void main(String[] args) {
+        int[][] mA={{2,1,4}
+                ,{6,5,3}};
+          int[][] mB ={{2,1,4}
+                 ,{6,5,3}};
+    int[][] resultado;   
+    OperacionesMatrices om = new OperacionesMatrices(mA,mB);
+    try {
+        resultado= om.sumaMatriz();
+        System.out.println("SUMA DE MATRIZ A+B");
+        for(int[] v:resultado){
+            System.out.println(Arrays.toString(v));
+        }
+    } catch (Exception ex){
+        System.out.println(ex.getMessage());
+    }
+    System.exit(0);
+}
+}
